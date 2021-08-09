@@ -1,0 +1,15 @@
+{% load static %}
+    <! DOCTYPE html>
+    <html>
+        <title>Products</title>
+        <body>
+            {% for product in products %}
+                <h1>{{ product.name }}</h1>
+                <p> Ingredients: {{ product.ingredients }}</p>
+                <p> Instructions: {{ product.description }}</p>
+                <p> Treats {{ product.treatment_type }} </p>
+                <a href='{{ product.link }}'> Buy it Here</a>
+            {% endfor %}
+        </body>
+    </html>
+
