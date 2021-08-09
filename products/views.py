@@ -3,7 +3,7 @@ from products.models import Product
 from users.models import Profile
 from products.serializers import ProductSerializer
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render
 
 class ProductList(generics.ListCreateAPIView):
     queryset = Product.objects.all()
