@@ -1,3 +1,6 @@
+{% extends "users/base.html" %}
+{% block content %}
+
 <div class="content-section">
     <form method="POST">
         {% csrf_token %}
@@ -15,3 +18,5 @@
         </small>
     </div>
 </div>
+
+{% endblock content %}
