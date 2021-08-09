@@ -1,15 +1,26 @@
+from typing import ContextManager
 from rest_framework import generics
 from products.models import Product
+from django.views.generic import ListView
 from users.models import Profile
 from products.serializers import ProductSerializer
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
+from rest_framework.renderers import TemplateHTMLRenderer
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
-class ProductList(generics.ListCreateAPIView):
+class CreateProduct(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    pass
+    
+class ListProducts(APIView):
+    renderer_classes = [TemplateHTMLRenderer]
+    template_name = 'products/products.html'
 
+    def get(self, request):
+        queryset = Product.objects.all()
+        return Response({'products': queryset})
 
 class ProductDetail(generics.RetrieveDestroyAPIView):
     queryset = Product.objects.all()

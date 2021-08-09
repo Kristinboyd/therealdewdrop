@@ -1,7 +1,16 @@
-{% block content %}
+<{% block content %}
     <! DOCTYPE html>
     <html>
-        <title>HI</title>
+        <title>Products</title>
+        <body>
+            {% for product in products %}
+                <h1>{{ product.name }}</h1>
+                <p> Ingredients: {{ product.ingredients }}</p>
+                <p> Instructions: {{ product.description }}</p>
+                <p> Use for {{ product.treatment_type }} skin</p>
+                <p> Buy it here {{ product.link }} </p>
+            {% endfor %}
+        </body>
     </html>
 
-{% endblock content %}
+{% endblock content %}>
