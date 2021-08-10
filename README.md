@@ -21,3 +21,6 @@ http://127.0.0.1:8000/profile/
 
 User adds the product to the Profile
 http://127.0.0.1:8000/products/add-to-profile/user/?product_name=Drunk%20Elephant
+
+
+pip install django-filter

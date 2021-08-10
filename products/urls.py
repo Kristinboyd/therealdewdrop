@@ -8,5 +8,5 @@ urlpatterns = [
     path('add-product', CreateProduct.as_view(), name='listcreate'),
     path('', ListProducts.as_view(), name='listproducts'),
     re_path(r'^add-to-profile/(?P<username>\w{0,50})/$', add_to_profile, name='add_to_profile'),
-    re_path(r'^filter/(?P<username>\w{0,50})/$', ProductGetByCondition.as_view())
+    re_path(r'^filter/(?P<username>\w{0,50})/$', ProductGetByCondition.as_view()),
 ]

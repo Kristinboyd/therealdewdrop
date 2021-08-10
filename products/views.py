@@ -10,6 +10,7 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+
 class CreateProduct(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -37,8 +38,7 @@ class ProductGetByCondition(generics.ListAPIView):
         """
         tc = self.request.GET.get('treatment_type')
         return Product.objects.filter(treatment_type=tc)
-
-
+ 
 @login_required()
 def add_to_profile(request, **kwargs):
     # Get Profile given the logged in User

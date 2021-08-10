@@ -3,20 +3,13 @@ from django.db import models
 # Create your models here.
 class Product(models.Model):
 
-    DRY = "DRYNESS"
-    OIL = "OILY"
-    ACNE = "ACNE"
-    AGE = "AGING"
-    ROSE = "ROSACEA"
-    NONE = "NONE"
-
     TREATMENT_TYPE = (
-        ("DRY", "Dryness"),
-        ("OIL", "Oily"),
-        ("ACNE", "Acne"),
-        ("AGE", "Aging"),
-        ("ROSE", "Rosacea"),
-        ("NONE", "None")
+        ("Dryness", "Dryness"),
+        ("Oily", "Oily"),
+        ("Acne", "Acne"),
+        ("Aging", "Aging"),
+        ("Rosacea", "Rosacea"),
+        ("None", "None")
     )
 
     name = models.CharField(max_length=100)
