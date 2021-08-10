@@ -7,12 +7,15 @@
           <h2 class="account-heading">{{ user.username }}</h2>
           <p class="text-secondary">{{ user.email }}</p>
           <p>Skin Concerns: {{ user.profile.skin_concern }}</p>
-
-          <ol>
+          <h1> Favorite Products </h1>
+          <div class="card-body">
             {% for product in products %}
-            <li>{{ product.name}} {{product.description}}: {{product.treatment_type}} </li>
+            <h2 class="card-title">💧 {{ product.name }} 💧</h2>
+            <p> Ingredients: {{ product.ingredients }}</p>
+            <p> Instructions: {{ product.description }}</p>
+            <p> Great for {{ product.treatment_type }}! </p>
             {% endfor %}
-          </ol>
+          </div>
         </div>
       </div>
 {% endblock content %}
