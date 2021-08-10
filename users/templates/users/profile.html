@@ -6,7 +6,7 @@
         <div class="media-body">
           <h2 class="account-heading">{{ user.username }}</h2>
           <p class="text-secondary">{{ user.email }}</p>
-          <p>Skin Concerns: {{ user.profile.skin_concern }}</p>
+          {% comment %} <p>Skin Concerns: {{ user.profile.skin_concern }}</p> {% endcomment %}
 
           <ol>
             {% for product in products %}
