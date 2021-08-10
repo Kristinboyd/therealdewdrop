@@ -10,6 +10,7 @@
                 <p> Ingredients: {{ product.ingredients }}</p>
                 <p> Instructions: {{ product.description }}</p>
                 <p> Treats {{ product.treatment_type }} </p>
+                <p><a href='{{ product.add_to_profile }}'> Add to Dewdrop</a></p>
                 <a href='{{ product.link }}'> Buy it Here</a>
             {% endfor %}
         </body>
