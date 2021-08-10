@@ -10,7 +10,6 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-
 class CreateProduct(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -27,6 +26,7 @@ class ProductDetail(generics.RetrieveDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     pass
+
 
 class ProductGetByCondition(generics.ListAPIView):
     serializer_class = ProductSerializer
