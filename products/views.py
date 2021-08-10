@@ -54,4 +54,4 @@ def add_to_profile(request, **kwargs):
     profile.save()
 
     # TODO: Do not render about.html
-    return render(request, 'products/about.html')
+    return render(request, 'products/products.html')
