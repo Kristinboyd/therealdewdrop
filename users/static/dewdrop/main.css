@@ -17,11 +17,11 @@ background-color: #5f788a;
 }
 
 .site-header .navbar-nav .nav-link {
-color: #cbd5db;
+color: #76c3f0;
 }
 
 .site-header .navbar-nav .nav-link:hover {
-color: #ffffff;
+color: #f78d8d;
 }
 
 .site-header .navbar-nav .nav-link.active {
@@ -29,9 +29,9 @@ font-weight: 500;
 }
 
 .content-section {
-background: #ffffff;
+background: #94f09f;
 padding: 10px 20px;
-border: 1px solid #dddddd;
+border: 1px solid #601515;
 border-radius: 3px;
 margin-bottom: 20px;
 }
@@ -58,7 +58,7 @@ margin-right: 16px;
 .article-metadata {
 padding-bottom: 1px;
 margin-bottom: 4px;
-border-bottom: 1px solid #e3e3e3
+border-bottom: 1px solid #cb8585
 }
 
 .article-metadata a:hover {
