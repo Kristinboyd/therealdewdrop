@@ -10,7 +10,6 @@ from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-
 class CreateProduct(generics.ListCreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
@@ -27,6 +26,7 @@ class ProductDetail(generics.RetrieveDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     pass
+
 
 class ProductGetByCondition(generics.ListAPIView):
     serializer_class = ProductSerializer
@@ -54,6 +54,4 @@ def add_to_profile(request, **kwargs):
     profile.save()
 
     # TODO: Do not render about.html
-    return render(request, 'products/about.html')
-
-# kwargs = dict_keys([‘_auth_user_id’, ‘_auth_user_backend’, ‘_auth_user_hash’])
+    return render(request, 'products/products.html')
