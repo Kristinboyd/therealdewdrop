@@ -4,9 +4,8 @@
     <div class="content-section">
       <div class="media">
         <div class="media-body">
-          <h2 class="account-heading">{{ user.username }}</h2>
+          <h1 class="account-heading">{{ user.username }}</h1>
           <p class="text-secondary">{{ user.email }}</p>
-          <p>Skin Concerns: {{ user.profile.skin_concern }}</p>
           <h1> Favorite Products </h1>
           <div class="card-body">
             {% for product in products %}
