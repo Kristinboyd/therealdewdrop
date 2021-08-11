@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 from users.models import Profile
+from products.models import Product
 
 def register(request):
     if request.method == 'POST':
@@ -25,3 +26,22 @@ def profile(request):
 
     return render(request, 'users/profile.html', {'products': all_products})
 
+@login_required()
+def remove_from_profile(request, **kwargs):
+    # Get Profile given the logged in User
+    print(str(request.user) + 'LOOK HERE')
+    user = request.user;
+    profile = Profile.objects.get(user=user)
+
+    # Add Passed in Product to the Profile
+    product_name = request.GET.get('product_name')
+    print(product_name)
+    product = Product.objects.get(name=product_name)
+
+    # Save it to DB
+    profile.products.remove(product)
+    profile.save()
+
+    # TODO: Do not render about.html
+    # return render(request, 'products/products.html')
+    return redirect("profile:profile")

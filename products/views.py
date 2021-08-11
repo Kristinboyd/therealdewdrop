@@ -57,25 +57,5 @@ def add_to_profile(request, **kwargs):
 
     # TODO: Do not render about.html
     # return render(request, 'products/products.html')
-    return redirect("profile")
+    return redirect("profile:profile")
 # kwargs are dict_keys([‘_auth_user_id’, ‘_auth_user_backend’, ‘_auth_user_hash’])
-
-@login_required()
-def remove_from_profile(request, **kwargs):
-    # Get Profile given the logged in User
-    print(str(request.user) + 'LOOK HERE')
-    user = request.user;
-    profile = Profile.objects.get(user=user)
-
-    # Add Passed in Product to the Profile
-    product_name = request.GET.get('product_name')
-    print(product_name)
-    product = Product.objects.get(name=product_name)
-
-    # Save it to DB
-    profile.products.remove(product)
-    profile.save()
-
-    # TODO: Do not render about.html
-    # return render(request, 'products/products.html')
-    return redirect("profile")
