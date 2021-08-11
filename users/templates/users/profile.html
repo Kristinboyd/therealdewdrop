@@ -4,16 +4,21 @@
     <div class="content-section">
       <div class="media">
         <div class="media-body">
-          <h1 class="account-heading">{{ user.username }}</h1>
-          <p class="text-secondary">{{ user.email }}</p>
-          <h1> Favorite Products </h1>
+          <h1 class="account-heading">Welcome {{ user.username }}!</h1>
+
+          <h1> Here are your favorite products... </h1>
           <div class="card-body">
             {% for product in products %}
-            <h2 class="card-title">💧 {{ product.name }} 💧</h2>
-            <p> Ingredients: {{ product.ingredients }}</p>
-            <p> Instructions: {{ product.description }}</p>
-            <p> Great for {{ product.treatment_type }}! </p>
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }} </h5>
+                <p class="card-text">Ingredients: {{ product.ingredients }}</p>
+                <p class="card-text">Instructions: {{ product.description }}</p>
+                <p class="card-text">Great for {{ product.treatment_type }}!</p>
+              </div>
+            </div>
             {% endfor %}
+          </div>
           </div>
         </div>
       </div>
