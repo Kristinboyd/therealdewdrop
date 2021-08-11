@@ -5,7 +5,7 @@ from django.views.generic import ListView
 from users.models import Profile
 from products.serializers import ProductSerializer
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -42,11 +42,13 @@ class ProductGetByCondition(generics.ListAPIView):
 @login_required()
 def add_to_profile(request, **kwargs):
     # Get Profile given the logged in User
+    print(str(request.user) + 'LOOK HERE')
     user = request.user;
     profile = Profile.objects.get(user=user)
 
     # Add Passed in Product to the Profile
     product_name = request.GET.get('product_name')
+    print(product_name)
     product = Product.objects.get(name=product_name)
 
     # Save it to DB
@@ -54,6 +56,6 @@ def add_to_profile(request, **kwargs):
     profile.save()
 
     # TODO: Do not render about.html
-    return render(request, 'products/products.html')
-
+    # return render(request, 'products/products.html')
+    return redirect("profile")
 # kwargs are dict_keys([‘_auth_user_id’, ‘_auth_user_backend’, ‘_auth_user_hash’])
