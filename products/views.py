@@ -38,7 +38,7 @@ class ProductGetByCondition(generics.ListAPIView):
         """
         tc = self.request.GET.get('treatment_type')
         return Product.objects.filter(treatment_type=tc)
- 
+
 @login_required()
 def add_to_profile(request, **kwargs):
     # Get Profile given the logged in User
@@ -55,3 +55,5 @@ def add_to_profile(request, **kwargs):
 
     # TODO: Do not render about.html
     return render(request, 'products/products.html')
+
+# kwargs are dict_keys([‘_auth_user_id’, ‘_auth_user_backend’, ‘_auth_user_hash’])
