@@ -11,11 +11,10 @@
             {% for product in products %}
             <div class="card" style="width: 18rem;">
               <div class="card-body">
-                <h5 class="card-title">💧 {{ product.name }} 💧</h5>
+                <h5 class="card-title">{{ product.name }} </h5>
                 <p class="card-text">Ingredients: {{ product.ingredients }}</p>
                 <p class="card-text">Instructions: {{ product.description }}</p>
                 <p class="card-text">Great for {{ product.treatment_type }}!</p>
-                <a href="{{ product.link }}" class="btn btn-outline-info">Buy Here</a>
               </div>
             </div>
             {% endfor %}
