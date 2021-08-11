@@ -2,6 +2,7 @@
 {% block content %}
 {% load static %}
     <! DOCTYPE html>
+    <meta charset="UTF-8">
     <html>
         <title>Products</title>
         <div class="container">
@@ -14,9 +15,9 @@
                                     <p class="card-text">Ingredients: {{ product.ingredients }}</p>
                                     <p class="card-text">Instructions: {{ product.description }}</p>
                                     <p class="card-text">Great for {{ product.treatment_type }}!</p>
-                                    <a href="{{ product.link }}" class="btn btn-outline-dark">Buy Here</a>
+                                    <a href="{{ product.link }}" class="btn btn-outline-dark">Buy Here &#128184;</a>
                                     {% if user.is_authenticated %}
-                                    <a href="add_to_profile?product_name={{ product.name }}" class="btn btn-outline-info">Add to Profile</a>
+                                    <a href="add_to_profile?product_name={{ product.name }}" class="btn btn-outline-info">Add to Profile &#128151;</a>
                                     {% endif %}
                                 </div>
                             </div>
