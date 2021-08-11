@@ -6,19 +6,21 @@
         <div class="media-body">
           <h1 class="account-heading">Welcome {{ user.username }}!</h1>
           <h1> Here are your favorite products... </h1>
-          <div class="card-body">
-            {% for product in products %}
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title">{{ product.name }} </h5>
-                <p class="card-text">Ingredients: {{ product.ingredients }}</p>
-                <p class="card-text">Instructions: {{ product.description }}</p>
-                <p class="card-text">Great for {{ product.treatment_type }}!</p>
-              </div>
-            </div>
-            {% endfor %}
-          </div>
-          </div>
-        </div>
-      </div>
+          <body>
+            <div class="container">
+              <div class="row">
+                      {% for product in products %}
+                          <div class="col-sm-4 card-space">
+                              <div class="card" style="width: 18rem;">
+                                  <div class="card-body">
+                                      <h5 class="card-title">{{ product.name }} </h5>
+                                      <p class="card-text">Ingredients: {{ product.ingredients }}</p>
+                                      <p class="card-text">Instructions: {{ product.description }}</p>
+                                      <p class="card-text">Great for {{ product.treatment_type }}!</p>
+                                  </div>
+                              </div>
+                          </div>
+                          {% endfor %}
+                      </div> 
+            </body>
 {% endblock content %}
