@@ -57,5 +57,5 @@ def add_to_profile(request, **kwargs):
 
     # TODO: Do not render about.html
     # return render(request, 'products/products.html')
-    return redirect("profile")
+    return redirect("profile:profile")
 # kwargs are dict_keys([‘_auth_user_id’, ‘_auth_user_backend’, ‘_auth_user_hash’])

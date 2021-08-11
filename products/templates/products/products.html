@@ -14,11 +14,8 @@
                                     <p class="card-text">Ingredients: {{ product.ingredients }}</p>
                                     <p class="card-text">Instructions: {{ product.description }}</p>
                                     <p class="card-text">Great for {{ product.treatment_type }}!</p>
-                                    <a href="{{ product.link }}" class="btn btn-outline-info">Buy Here</a>
+                                    <a href="{{ product.link }}" class="btn btn-outline-dark">Buy Here</a>
                                     {% if user.is_authenticated %}
-                                    {% comment %} <form action='add_to_profile?product_name=test' method='GET'>
-                                        <button type='submit'>Add to Profile</button>
-                                    </form> {% endcomment %}
                                     <a href="add_to_profile?product_name={{ product.name }}" class="btn btn-outline-info">Add to Profile</a>
                                     {% endif %}
                                 </div>
