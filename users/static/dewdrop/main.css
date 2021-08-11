@@ -15,6 +15,9 @@ margin: 0;
 a {
 color: #17a2b8;
 }
+.card-space {
+  margin-bottom: 20px; 
+}
 
 a:hover {
     color: #f78d8d;
