@@ -24,3 +24,4 @@ def profile(request):
     all_products = profile.products.all()
 
     return render(request, 'users/profile.html', {'products': all_products})
+

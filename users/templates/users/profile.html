@@ -4,8 +4,8 @@
     <div class="content-section">
       <div class="media">
         <div class="media-body">
-          <h1 class="account-heading">Welcome {{ user.username }}!</h1>
-          <h1> Here are your favorite products... </h1>
+          <h2 class="account-heading">Welcome {{ user.username }}!</h2>
+          <h2> Here are your favorite products... </h2>
           <body>
             <div class="container">
               <div class="row">
@@ -17,6 +17,7 @@
                                       <p class="card-text">Ingredients: {{ product.ingredients }}</p>
                                       <p class="card-text">Instructions: {{ product.description }}</p>
                                       <p class="card-text">Great for {{ product.treatment_type }}!</p>
+                                      <a href="products:remove_from_profile?product_name={{ product.name }}" class="btn btn-outline-info">Remove</a>
                                   </div>
                               </div>
                           </div>
