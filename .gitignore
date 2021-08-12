@@ -1,5 +1,4 @@
 core/secrets.py
 __pycache__/
-db.sqlite3
 *.pyc
 venv/
