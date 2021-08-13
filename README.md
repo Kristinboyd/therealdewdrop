@@ -25,6 +25,49 @@ http://127.0.0.1:8000/products/add-to-profile/user/?product_name=Drunk%20Elephan
 Admin to add products
 http://127.0.0.1:8000/products/add-product 
 
-
-
 pip install django-filter
+
+
+
+
+
+STEPS FOR NEW POSTGRES -------------------------------------------------------->
+$ pip install psycopg2
+$ psql -U postgres
+$ CREATE DATABASE therealdewdrop;
+
+add this into your settings.py file and comment out the following: 
+
+ <!-- DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.sqlite3',
+         'NAME': BASE_DIR / 'db.sqlite3',
+     }
+} -->
+
+DATABASES = {
+
+    'default': {
+
+        'ENGINE': 'django.db.backends.postgresql',
+
+        'NAME': 'therealdewdrop',
+
+        'USER': 'postgres',
+
+        'PASSWORD': 'postgres',
+
+        'HOST': 'localhost',
+
+        'PORT': '5432',
+
+    }
+
+}
+
+then: 
+$ pip freeze > requirements.txt
+$ python manage.py migrate
+$ pip install django-crispy-forms
+$ python manage.py runserver
+
