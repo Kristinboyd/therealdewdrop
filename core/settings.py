@@ -96,13 +96,13 @@ DATABASES = {
 
         'NAME': 'therealdewdrop',
 
-        # 'USER': 'postgres',
+        'USER': 'postgres',
 
-        # 'PASSWORD': 'postgres',
+        'PASSWORD': 'postgres',
 
-        # 'HOST': 'localhost',
+        'HOST': 'localhost',
 
-        # 'PORT': '5432',
+        'PORT': '5432',
 
     }
 
