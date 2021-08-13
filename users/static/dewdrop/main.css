@@ -29,7 +29,8 @@ a:hover {
 
 .bg-pink {
     background-color: #fae1dd;
-  }
+    margin-bottom: 20px;
+}
 
 .site-header .navbar-nav .nav-link {
 color: #17a2b8;
