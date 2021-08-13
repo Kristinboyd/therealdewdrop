@@ -1,1 +1,1 @@
-web: gunicorn therealdewdrop.wsgi
+web: gunicorn core.wsgi
