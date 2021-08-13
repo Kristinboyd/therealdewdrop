@@ -71,3 +71,5 @@ $ python manage.py migrate
 $ pip install django-crispy-forms
 $ python manage.py runserver
 
+commands to migrate database to heroku 
+heroku run python manage.py migrate
