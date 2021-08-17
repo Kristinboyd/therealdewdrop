@@ -1,3 +1,20 @@
+Description of the application:
+We created a mobile friendly web application that acts as a hub to highlight 4 star rated, clean and cruelty free, skin care products. 
+
+Demonstration as a user:
+As a user I want to….Create my own dewdrop and log in/log out 
+As a user I want to… browse clean, top rated products that have been vetted by dewdrop 
+As a user I want to….add products im interested in to my dewdrop 
+As a user I want to… have the option to purchase the products in my dewdrop 
+As a user I want to… remove products from my dewdrop 
+
+What did you use?
+LANGUAGE: python
+BACK END: Django
+FRONT END: Django
+DATABASE: Postgres
+DEPLOYMENT: Heroku 
+
 Commands for Startup
 python3 manage.py makemigrations 
 python3 manage.py migrate 
